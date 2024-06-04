@@ -28,34 +28,34 @@ export default defineType({
           name: 'brandingSubtitle',
           title: 'Branding Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'dataAnalysisSubtitle',
           title: 'Data Analysis Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'uiuxSubtitle',
           title: 'UI & UX Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'developmentSubtitle',
           title: 'Development Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'digitalMarketingSubtitle',
           title: 'Digital Marketing Subtitle',
-          rows:4,
+          rows: 4,
           type: 'text',
           validation: (Rule) => Rule.required(),
         }),
@@ -77,7 +77,7 @@ export default defineType({
           name: 'subtitle',
           title: 'Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         ...[...new Array(4)].map((_, key) =>
@@ -86,6 +86,12 @@ export default defineType({
             title: `Step${key + 1}`,
             type: 'object',
             fields: [
+              defineField({
+                name: 'name',
+                title: 'Name',
+                type: 'string',
+                validation: (Rule) => Rule.required(),
+              }),
               defineField({
                 name: 'title',
                 title: 'Title',
@@ -96,11 +102,11 @@ export default defineType({
                 name: 'subtitle',
                 title: 'Subtitle',
                 type: 'text',
-                rows:4,
+                rows: 4,
                 validation: (Rule) => Rule.required(),
               }),
               defineField({
-                name: 'image',
+                name: 'media',
                 title: 'Image',
                 type: 'object',
                 fields: [
@@ -148,7 +154,7 @@ export default defineType({
           name: 'subtitle',
           title: 'Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -175,7 +181,7 @@ export default defineType({
           name: 'subtitle',
           title: 'Subtitle',
           type: 'text',
-          rows:4,
+          rows: 4,
           validation: (Rule) => Rule.required(),
         }),
         defineField({

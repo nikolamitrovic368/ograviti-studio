@@ -1,13 +1,14 @@
 import {StructureBuilder} from 'sanity/structure'
 
-import {BlockElementIcon, DocumentsIcon} from '@sanity/icons'
+import {BlockElementIcon} from '@sanity/icons'
+import {VscServerProcess} from 'react-icons/vsc'
 export const structure = (S: StructureBuilder) =>
   S.list()
     .title('Contents')
     .items([
       S.listItem()
         .title('Web Pages')
-        .icon(DocumentsIcon)
+        .icon(VscServerProcess)
         .child(
           S.list()
             .title('Web Pages')
