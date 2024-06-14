@@ -17,6 +17,22 @@ export const structure = (S: StructureBuilder) =>
                 .title('Home')
                 .icon(BlockElementIcon)
                 .child(S.document().schemaType('home').documentId('home').views([S.view.form()])),
+              S.listItem()
+                .title('About Us')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document().schemaType('aboutUs').documentId('aboutUs').views([S.view.form()]),
+                ),
+              S.divider(),
+              S.listItem()
+                .title('Testimonial')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document()
+                    .schemaType('testimonial')
+                    .documentId('testimonial')
+                    .views([S.view.form()]),
+                ),
             ]),
         ),
       S.divider(),
@@ -25,6 +41,7 @@ export const structure = (S: StructureBuilder) =>
         .icon(BlockElementIcon)
         .child(S.document().schemaType('companies').documentId('companies').views([S.view.form()])),
       ...S.documentTypeListItems().filter(
-        (listItem) => !['home', 'companies'].includes(listItem.getId() ?? ''),
+        (listItem) =>
+          !['home', 'aboutUs', 'testimonial', 'companies'].includes(listItem.getId() ?? ''),
       ),
     ])

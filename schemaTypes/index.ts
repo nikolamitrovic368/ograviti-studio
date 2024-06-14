@@ -9,6 +9,8 @@ import blog from './documents/blog'
 import career from './documents/career'
 import home from './singletons/home'
 import companies from './documents/companies'
+import aboutUs from './singletons/about-us'
+import testimonial from './singletons/testimonial'
 
 export const schemaTypes = [
   testimonialCard,
@@ -21,5 +23,7 @@ export const schemaTypes = [
   category,
   blockContent,
   home,
+  aboutUs,
+  testimonial,
   companies,
 ]

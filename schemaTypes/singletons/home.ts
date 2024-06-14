@@ -8,8 +8,6 @@ export default defineType({
     {name: 'branding', title: 'Branding'},
     {name: 'journey', title: 'Journey'},
     {name: 'caseStudies', title: 'Case Study'},
-    {name: 'testimonial', title: 'Testimonial'},
-    {name: 'companies', title: 'Companies'},
   ],
   fields: [
     defineField({
@@ -165,44 +163,5 @@ export default defineType({
         }),
       ],
     }),
-    defineField({
-      name: 'testimonial',
-      title: 'Testimonial',
-      group: 'testimonial',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'subtitle',
-          title: 'Subtitle',
-          type: 'text',
-          rows: 4,
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'testimonialCards',
-          title: 'Testimonial Cards',
-          type: 'array',
-          of: [{type: 'reference', to: {type: 'testimonialCard'}}],
-        }),
-      ],
-    }),
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
 })
