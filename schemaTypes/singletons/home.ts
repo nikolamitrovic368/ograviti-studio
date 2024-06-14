@@ -7,7 +7,7 @@ export default defineType({
   groups: [
     {name: 'branding', title: 'Branding'},
     {name: 'journey', title: 'Journey'},
-    {name: 'caseStudy', title: 'Case Study'},
+    {name: 'caseStudies', title: 'Case Study'},
     {name: 'testimonial', title: 'Testimonial'},
     {name: 'companies', title: 'Companies'},
   ],
@@ -139,10 +139,10 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'caseStudy',
+      name: 'caseStudies',
       title: 'Case Study',
       type: 'object',
-      group: 'caseStudy',
+      group: 'caseStudies',
       fields: [
         defineField({
           name: 'title',
@@ -158,10 +158,10 @@ export default defineType({
           validation: (Rule) => Rule.required(),
         }),
         defineField({
-          name: 'relatedBlogs',
-          title: 'Related Blogs',
+          name: 'relatedCaseStudies',
+          title: 'Related Case Studies',
           type: 'array',
-          of: [{type: 'reference', to: {type: 'blog'}}],
+          of: [{type: 'reference', to: {type: 'caseStudy'}}],
         }),
       ],
     }),

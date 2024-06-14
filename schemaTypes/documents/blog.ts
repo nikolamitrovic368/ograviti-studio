@@ -18,16 +18,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      validation: (Rule) => Rule.required(),
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -54,6 +44,16 @@ export default defineType({
       title: 'Related Blogs',
       type: 'array',
       of: [{type: 'reference', to: {type: 'blog'}}],
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     }),
   ],
 

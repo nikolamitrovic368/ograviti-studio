@@ -12,6 +12,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      description: 'This field is used only for Case Study Card',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'CompletedDate',
       title: 'Completed Date',
       type: 'string',
@@ -63,7 +70,8 @@ export default defineType({
     defineField({
       name: 'approachSubtitle',
       title: 'Approach Subtitle',
-      type: 'string',
+      type: 'text',
+      rows: 4,
       validation: (Rule) => Rule.required(),
     }),
     defineField({
@@ -114,6 +122,16 @@ export default defineType({
       title: 'Related Case Studies',
       type: 'array',
       of: [{type: 'reference', to: {type: 'caseStudy'}}],
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     }),
   ],
   preview: {
