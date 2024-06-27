@@ -16,12 +16,23 @@ export const structure = (S: StructureBuilder) =>
               S.listItem()
                 .title('Home')
                 .icon(BlockElementIcon)
-                .child(S.document().schemaType('home').documentId('home').views([S.view.form()])),
+                .child(
+                  S.document().schemaType('homePage').documentId('homePage').views([S.view.form()]),
+                ),
               S.listItem()
                 .title('About Us')
                 .icon(BlockElementIcon)
                 .child(
-                  S.document().schemaType('aboutUs').documentId('aboutUs').views([S.view.form()]),
+                  S.document()
+                    .schemaType('aboutUsPage')
+                    .documentId('aboutUsPage')
+                    .views([S.view.form()]),
+                ),
+              S.listItem()
+                .title('Blog')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document().schemaType('blogPage').documentId('blogPage').views([S.view.form()]),
                 ),
               S.divider(),
               S.listItem()
@@ -29,8 +40,8 @@ export const structure = (S: StructureBuilder) =>
                 .icon(BlockElementIcon)
                 .child(
                   S.document()
-                    .schemaType('testimonial')
-                    .documentId('testimonial')
+                    .schemaType('testimonialPage')
+                    .documentId('testimonialPage')
                     .views([S.view.form()]),
                 ),
             ]),
@@ -42,6 +53,8 @@ export const structure = (S: StructureBuilder) =>
         .child(S.document().schemaType('companies').documentId('companies').views([S.view.form()])),
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !['home', 'aboutUs', 'testimonial', 'companies'].includes(listItem.getId() ?? ''),
+          !['homePage', 'aboutUsPage', 'testimonialPage', 'companies', 'blogPage'].includes(
+            listItem.getId() ?? '',
+          ),
       ),
     ])

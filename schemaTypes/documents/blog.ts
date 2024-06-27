@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'blog',
@@ -37,6 +37,17 @@ export default defineType({
         {
           type: 'image',
         },
+        defineArrayMember({
+          type: 'object',
+          name: 'multiPartImageBlock',
+          title: 'Multi-Part Image Block',
+          fields: [
+            {
+              name: 'multiPartImage',
+              type: 'multiPartImage',
+            },
+          ],
+        }),
       ],
     }),
     defineField({
@@ -60,12 +71,7 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      media: 'image',
     },
   },
 })

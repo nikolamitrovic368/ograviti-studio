@@ -6,11 +6,13 @@ import testimonialCard from './documents/testimonialCard'
 import caseStudyCard from './documents/caseStudy'
 import teamMember from './documents/teamMember'
 import blog from './documents/blog'
+import blogPage from './singletons/blog'
 import career from './documents/career'
 import home from './singletons/home'
 import companies from './documents/companies'
 import aboutUs from './singletons/about-us'
 import testimonial from './singletons/testimonial'
+import multiPartImage from './documents/multiPartImage'
 
 export const schemaTypes = [
   testimonialCard,
@@ -26,4 +28,6 @@ export const schemaTypes = [
   aboutUs,
   testimonial,
   companies,
+  multiPartImage,
+  blogPage,
 ]

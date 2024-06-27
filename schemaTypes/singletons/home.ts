@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'home',
+  name: 'homePage',
   title: 'Home Page',
   type: 'document',
   groups: [

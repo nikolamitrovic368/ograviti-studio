@@ -1,9 +1,15 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'testimonialPage',
-  title: 'Testimonial Page',
+  name: 'blogPage',
+  title: 'Blog Page',
   type: 'document',
+  groups: [
+    {name: 'ourStory', title: 'Our Story'},
+    {name: 'ourMission', title: 'Our Mission'},
+    {name: 'ourTeam', title: 'Our Team'},
+    {name: 'contactUs', title: 'Contact Us'},
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -19,10 +25,10 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'testimonialCards',
-      title: 'Testimonial Cards',
+      name: 'blogs',
+      title: 'Blogs',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'testimonialCard'}}],
+      of: [{type: 'reference', to: {type: 'blog'}}],
     }),
   ],
 })
