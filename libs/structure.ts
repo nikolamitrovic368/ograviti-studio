@@ -34,6 +34,12 @@ export const structure = (S: StructureBuilder) =>
                 .child(
                   S.document().schemaType('blogPage').documentId('blogPage').views([S.view.form()]),
                 ),
+              S.listItem()
+                .title('CaseStudy')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document().schemaType('caseStudyPage').documentId('caseStudyPage').views([S.view.form()]),
+                ),
               S.divider(),
               S.listItem()
                 .title('Testimonial')
@@ -53,8 +59,13 @@ export const structure = (S: StructureBuilder) =>
         .child(S.document().schemaType('companies').documentId('companies').views([S.view.form()])),
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !['homePage', 'aboutUsPage', 'testimonialPage', 'companies', 'blogPage'].includes(
-            listItem.getId() ?? '',
-          ),
+          ![
+            'homePage',
+            'aboutUsPage',
+            'testimonialPage',
+            'companies',
+            'blogPage',
+            'caseStudyPage',
+          ].includes(listItem.getId() ?? ''),
       ),
     ])

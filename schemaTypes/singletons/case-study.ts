@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'blogPage',
-  title: 'Blog Page',
+  name: 'caseStudyPage',
+  title: 'Case Study Page',
   type: 'document',
   fields: [
     defineField({
@@ -19,10 +19,10 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'blogs',
-      title: 'Blogs',
+      name: 'caseStudies',
+      title: 'Case Studies',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'blog'}}],
+      of: [{type: 'reference', to: {type: 'caseStudy'}}],
     }),
   ],
 })
