@@ -52,6 +52,15 @@ export const structure = (S: StructureBuilder) =>
                     .documentId('careersPage')
                     .views([S.view.form()]),
                 ),
+              S.listItem()
+                .title('Contact Us')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document()
+                    .schemaType('contactUsPage')
+                    .documentId('contactUsPage')
+                    .views([S.view.form()]),
+                ),
               S.divider(),
               S.listItem()
                 .title('Testimonial')
@@ -79,6 +88,7 @@ export const structure = (S: StructureBuilder) =>
             'blogPage',
             'caseStudyPage',
             'careersPage',
+            'contactUsPage',
           ].includes(listItem.getId() ?? ''),
       ),
     ])

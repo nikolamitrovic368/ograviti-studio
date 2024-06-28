@@ -15,6 +15,7 @@ import aboutUs from './singletons/about-us'
 import testimonial from './singletons/testimonial'
 import multiPartImage from './documents/multiPartImage'
 import caseStudy from './singletons/case-study'
+import contactUs from './singletons/contact-us'
 
 export const schemaTypes = [
   testimonialCard,
@@ -34,4 +35,5 @@ export const schemaTypes = [
   blogPage,
   caseStudy,
   careersPage,
+  contactUs,
 ]
