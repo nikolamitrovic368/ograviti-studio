@@ -8,6 +8,7 @@ import teamMember from './documents/teamMember'
 import blog from './documents/blog'
 import blogPage from './singletons/blog'
 import career from './documents/career'
+import careersPage from './singletons/career'
 import home from './singletons/home'
 import companies from './documents/companies'
 import aboutUs from './singletons/about-us'
@@ -31,5 +32,6 @@ export const schemaTypes = [
   companies,
   multiPartImage,
   blogPage,
-  caseStudy
+  caseStudy,
+  careersPage,
 ]

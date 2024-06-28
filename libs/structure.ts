@@ -38,7 +38,19 @@ export const structure = (S: StructureBuilder) =>
                 .title('CaseStudy')
                 .icon(BlockElementIcon)
                 .child(
-                  S.document().schemaType('caseStudyPage').documentId('caseStudyPage').views([S.view.form()]),
+                  S.document()
+                    .schemaType('caseStudyPage')
+                    .documentId('caseStudyPage')
+                    .views([S.view.form()]),
+                ),
+              S.listItem()
+                .title('Career')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document()
+                    .schemaType('careersPage')
+                    .documentId('careersPage')
+                    .views([S.view.form()]),
                 ),
               S.divider(),
               S.listItem()
@@ -66,6 +78,7 @@ export const structure = (S: StructureBuilder) =>
             'companies',
             'blogPage',
             'caseStudyPage',
+            'careersPage',
           ].includes(listItem.getId() ?? ''),
       ),
     ])
