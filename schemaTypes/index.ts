@@ -1,7 +1,4 @@
 import blockContent from './documents/blockContent'
-import category from './documents/category'
-import post from './documents/post'
-import author from './documents/author'
 import testimonialCard from './documents/testimonialCard'
 import caseStudyCard from './documents/caseStudy'
 import teamMember from './documents/teamMember'
@@ -16,6 +13,8 @@ import testimonial from './singletons/testimonial'
 import multiPartImage from './documents/multiPartImage'
 import caseStudy from './singletons/case-study'
 import contactUs from './singletons/contact-us'
+import seo from './objects/seo'
+import globalSeo from './documents/globalSEO'
 
 export const schemaTypes = [
   testimonialCard,
@@ -23,9 +22,6 @@ export const schemaTypes = [
   teamMember,
   blog,
   career,
-  post,
-  author,
-  category,
   blockContent,
   home,
   aboutUs,
@@ -36,4 +32,6 @@ export const schemaTypes = [
   caseStudy,
   careersPage,
   contactUs,
+  seo,
+  globalSeo,
 ]

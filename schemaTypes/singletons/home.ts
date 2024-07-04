@@ -1,3 +1,4 @@
+import {SearchIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
@@ -8,6 +9,7 @@ export default defineType({
     {name: 'branding', title: 'Branding'},
     {name: 'journey', title: 'Journey'},
     {name: 'caseStudies', title: 'Case Study'},
+    {name: 'seo', title: 'SEO', icon: SearchIcon},
   ],
   fields: [
     defineField({
@@ -162,6 +164,12 @@ export default defineType({
           of: [{type: 'reference', to: {type: 'caseStudy'}}],
         }),
       ],
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      group: 'seo',
     }),
   ],
 })

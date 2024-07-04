@@ -1,9 +1,11 @@
+import { SearchIcon } from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'career',
   title: 'Career',
   type: 'document',
+  groups: [{name: 'seo', title: 'SEO', icon: SearchIcon}],
   fields: [
     defineField({
       name: 'title',
@@ -40,6 +42,12 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      group: 'seo',
     }),
   ],
 

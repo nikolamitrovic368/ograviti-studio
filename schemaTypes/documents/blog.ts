@@ -1,9 +1,11 @@
+import { SearchIcon } from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'blog',
   title: 'Blog',
   type: 'document',
+  groups: [{name: 'seo', title: 'SEO', icon: SearchIcon}],
   fields: [
     defineField({
       name: 'title',
@@ -19,12 +21,17 @@ export default defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Hero Image',
       type: 'image',
       validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },
+    }),
+    defineField({
+      name: 'displayHeroImage',
+      title: 'Display Hero Image in Blog Detail Page',
+      type: 'boolean',
     }),
     defineField({
       name: 'body',
@@ -65,6 +72,12 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'seo',
+      group: 'seo',
     }),
   ],
 
