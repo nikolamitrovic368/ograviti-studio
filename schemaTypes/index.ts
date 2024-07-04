@@ -14,7 +14,7 @@ import multiPartImage from './documents/multiPartImage'
 import caseStudy from './singletons/case-study'
 import contactUs from './singletons/contact-us'
 import seo from './objects/seo'
-import globalSeo from './documents/globalSEO'
+import globalSeo from './documents/globalSeo'
 
 export const schemaTypes = [
   testimonialCard,
