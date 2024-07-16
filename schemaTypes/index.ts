@@ -15,6 +15,7 @@ import caseStudy from './singletons/case-study'
 import contactUs from './singletons/contact-us'
 import seo from './objects/seo'
 import globalSeo from './documents/globalSeo'
+import footer from './singletons/footer'
 
 export const schemaTypes = [
   testimonialCard,
@@ -34,4 +35,5 @@ export const schemaTypes = [
   contactUs,
   seo,
   globalSeo,
+  footer,
 ]

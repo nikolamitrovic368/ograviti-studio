@@ -11,7 +11,7 @@ export const structure = (S: StructureBuilder) =>
         .icon(VscServerProcess)
         .child(
           S.list()
-            .title('Global SEO')
+            .title('Settings')
             .items([
               S.listItem()
                 .title('Global SEO')
@@ -21,6 +21,12 @@ export const structure = (S: StructureBuilder) =>
                     .schemaType('globalSeo')
                     .documentId('globalSeo')
                     .views([S.view.form()]),
+                ),
+              S.listItem()
+                .title('Footer')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document().schemaType('footer').documentId('footer').views([S.view.form()]),
                 ),
             ]),
         ),
@@ -109,6 +115,7 @@ export const structure = (S: StructureBuilder) =>
             'careersPage',
             'contactUsPage',
             'globalSeo',
+            'footer',
           ].includes(listItem.getId() ?? ''),
       ),
     ])
