@@ -26,5 +26,11 @@ export default defineType({
       type: 'seo',
       group: 'seo',
     }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
+    }),
   ],
 })

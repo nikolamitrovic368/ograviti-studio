@@ -1,4 +1,4 @@
-import { SearchIcon } from '@sanity/icons'
+import {SearchIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
@@ -31,6 +31,12 @@ export default defineType({
       title: 'SEO',
       type: 'seo',
       group: 'seo',
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
     }),
   ],
 })

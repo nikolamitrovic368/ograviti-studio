@@ -51,6 +51,12 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+      hidden: true,
+    }),
   ],
   preview: {
     select: {
