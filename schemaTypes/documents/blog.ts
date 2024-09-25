@@ -1,5 +1,6 @@
-import { SearchIcon } from '@sanity/icons'
+import {SearchIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
+import {isUniqueOtherThanLanguage} from '../../utils/is-unique-other-than-language'
 
 export default defineType({
   name: 'blog',
@@ -71,6 +72,7 @@ export default defineType({
       options: {
         source: 'title',
         maxLength: 96,
+        isUnique: isUniqueOtherThanLanguage,
       },
     }),
     defineField({

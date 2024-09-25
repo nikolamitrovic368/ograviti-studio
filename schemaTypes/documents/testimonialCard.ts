@@ -1,5 +1,4 @@
 import {defineField, defineType} from 'sanity'
-import {isUniqueOtherThanLanguage} from '../../utils/is-unique-other-than-language'
 
 export default defineType({
   name: 'testimonialCard',
