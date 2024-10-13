@@ -1,9 +1,11 @@
 import {defineType} from 'sanity'
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 
 export default defineType({
   name: 'companies',
   title: 'Companies',
   type: 'document',
+  icon: HiOutlineBuildingOffice2,
   fields: [
     {
       name: 'companyImages',
@@ -18,14 +20,8 @@ export default defineType({
   ],
 
   preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+    prepare() {
+      return {title: 'Companies'}
     },
   },
 })

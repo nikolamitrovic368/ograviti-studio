@@ -1,6 +1,6 @@
 import {SearchIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
-import {isUniqueOtherThanLanguage} from '../../utils/is-unique-other-than-language'
+import {isUniqueOtherThanLanguage} from '../../utils/utils'
 
 export default defineType({
   name: 'caseStudy',
@@ -154,6 +154,13 @@ export default defineType({
     select: {
       title: 'title',
       media: 'image',
+      language: 'language',
+      slug: 'slug',
     },
+    prepare: ({title, language, media, slug}) => ({
+      title,
+      media,
+      subtitle: `${slug.current} / ${language.toUpperCase()}`,
+    }),
   },
 })

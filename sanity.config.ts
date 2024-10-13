@@ -2,13 +2,14 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {presentationTool} from 'sanity/presentation'
-import {schemaTypes} from './schemaTypes'
-import {structure} from './libs/structure'
+import {schemaTypes} from './schemas'
+import structure from './structure'
 import {BASE_URL} from './env'
 import {
   DeleteTranslationAction,
   documentInternationalization,
 } from '@sanity/document-internationalization'
+import {internationalizedArray} from 'sanity-plugin-internationalized-array'
 
 export default defineConfig({
   name: 'default',
@@ -34,13 +35,12 @@ export default defineConfig({
         {id: 'de', title: 'German'},
       ],
       schemaTypes: [
+        'page',
         'blog',
         'career',
         'caseStudy',
-        'teamMember',
         'testimonialCard',
         'globalSeo',
-        'homePage',
         'aboutUsPage',
         'testimonialPage',
         'blogPage',
@@ -48,6 +48,14 @@ export default defineConfig({
         'careersPage',
         'contactUsPage',
       ],
+    }),
+    internationalizedArray({
+      languages: [
+        {id: 'en', title: 'English'},
+        {id: 'de', title: 'German'},
+      ],
+      defaultLanguages: ['en'],
+      fieldTypes: ['string', 'text'],
     }),
   ],
 

@@ -1,10 +1,10 @@
-import {SearchIcon} from '@sanity/icons'
-import {defineArrayMember, defineField, defineType} from 'sanity'
-import {isUniqueOtherThanLanguage} from '../../utils/is-unique-other-than-language'
+import { SearchIcon } from '@sanity/icons'
+import {defineField, defineType} from 'sanity'
+import { isUniqueOtherThanLanguage } from '../../utils/utils'
 
 export default defineType({
-  name: 'blog',
-  title: 'Blog',
+  name: 'career',
+  title: 'Career',
   type: 'document',
   groups: [{name: 'seo', title: 'SEO', icon: SearchIcon}],
   fields: [
@@ -21,20 +21,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'image',
-      title: 'Hero Image',
-      type: 'image',
-      validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'displayHeroImage',
-      title: 'Display Hero Image in Blog Detail Page',
-      type: 'boolean',
-    }),
-    defineField({
       name: 'body',
       title: 'Body',
       type: 'array',
@@ -45,24 +31,8 @@ export default defineType({
         {
           type: 'image',
         },
-        defineArrayMember({
-          type: 'object',
-          name: 'multiPartImageBlock',
-          title: 'Multi-Part Image Block',
-          fields: [
-            {
-              name: 'multiPartImage',
-              type: 'multiPartImage',
-            },
-          ],
-        }),
       ],
-    }),
-    defineField({
-      name: 'relatedBlogs',
-      title: 'Related Blogs',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'blog'}}],
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -92,7 +62,6 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      media: 'image',
     },
   },
 })
