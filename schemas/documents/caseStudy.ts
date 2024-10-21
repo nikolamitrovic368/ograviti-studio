@@ -54,71 +54,9 @@ export default defineType({
         hotspot: true,
       },
     }),
-    {
-      name: 'headerImages',
-      type: 'array',
-      title: 'Header Images',
-      of: [
-        {
-          type: 'image',
-        },
-      ],
-    },
     defineField({
-      name: 'approachTitle',
-      title: 'Approach Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'approachSubtitle',
-      title: 'Approach Subtitle',
-      type: 'text',
-      rows: 4,
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'backgroundTitle',
-      title: 'Background Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'backgroundSubtitle',
-      title: 'Background Subtitle',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'footerimage',
-      title: 'Footer Image',
-      type: 'image',
-      validation: (Rule) => Rule.required(),
-      options: {
-        hotspot: true,
-      },
-    }),
-    {
-      name: 'footerImages',
-      type: 'array',
-      title: 'Footer Images',
-      of: [
-        {
-          type: 'image',
-        },
-      ],
-    },
-    defineField({
-      name: 'exceptionalResultsTitle',
-      title: 'Exceptional Results Title',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'exceptionalResultsSubtitle',
-      title: 'Exceptional Results Subtitle',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
+      name: 'modules',
+      type: 'modules',
     }),
     defineField({
       name: 'relatedCaseStudies',

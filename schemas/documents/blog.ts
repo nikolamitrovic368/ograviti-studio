@@ -56,6 +56,9 @@ export default defineType({
             },
           ],
         }),
+        {
+          type: 'video',
+        },
       ],
     }),
     defineField({
@@ -93,6 +96,13 @@ export default defineType({
     select: {
       title: 'title',
       media: 'image',
+      language: 'language',
+      slug: 'slug',
     },
+    prepare: ({title, language, media, slug}) => ({
+      title,
+      media,
+      subtitle: `${slug.current} / ${language.toUpperCase()}`,
+    }),
   },
 })

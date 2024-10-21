@@ -6,7 +6,7 @@ import blog from './documents/blog'
 import blogPage from './singletons/blog'
 import career from './documents/career'
 import careersPage from './singletons/career'
-import companies from './documents/companies'
+import companies from './modules/companies'
 import aboutUs from './singletons/about-us'
 import testimonial from './singletons/testimonial'
 import multiPartImage from './documents/multiPartImage'
@@ -21,6 +21,10 @@ import testimonialList from './modules/testimonial-list'
 import modules from './modules/modules'
 import branding from './modules/branding'
 import page from './documents/page'
+import gallery from './modules/gallery'
+import textWithLogo from './modules/text-with-logo'
+import simpleText from './modules/simple-text'
+import video from './modules/video'
 
 export const schemaTypes = [
   // document
@@ -52,6 +56,10 @@ export const schemaTypes = [
   caseStudyList,
   journeyCarousel,
   testimonialList,
+  gallery,
+  textWithLogo,
+  simpleText,
+  video,
 
   // modules
   modules,

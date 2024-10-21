@@ -22,9 +22,25 @@ export default defineField({
       type: 'testimonial-list',
     }),
     defineArrayMember({
-      name: 'Companies',
+      name: 'companies',
       type: 'reference',
       to: {type: 'companies'},
+    }),
+    defineArrayMember({
+      name: 'gallery',
+      type: 'gallery',
+    }),
+    defineArrayMember({
+      name: 'text-with-logo',
+      type: 'text-with-logo',
+    }),
+    defineArrayMember({
+      name: 'simple-text',
+      type: 'simple-text',
+    }),
+    defineArrayMember({
+      name: 'video',
+      type: 'video',
     }),
   ],
   options: {
