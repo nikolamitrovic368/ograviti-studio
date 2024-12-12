@@ -57,7 +57,7 @@ export default defineField({
       views: [
         {
           name: 'grid',
-          previewImageUrl: (schemaTypeName) => `/static/preview-${schemaTypeName}.png`,
+          previewImageUrl: (schemaTypeName) => `/static/preview/${schemaTypeName}.png`,
         },
         {name: 'list'},
       ],
