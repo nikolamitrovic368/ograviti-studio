@@ -21,25 +21,21 @@ export default defineType({
       name: 'linkedin',
       title: 'Linkedin',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'facebook',
       title: 'Facebook',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'instagram',
       title: 'Instagram',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'youtube',
       title: 'Youtube',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',

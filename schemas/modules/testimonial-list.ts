@@ -11,14 +11,12 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
       title: 'Subtitle',
       type: 'text',
       rows: 4,
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'testimonialCards',

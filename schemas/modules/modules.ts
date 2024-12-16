@@ -6,20 +6,28 @@ export default defineField({
   title: 'Modules',
   of: [
     defineArrayMember({
-      name: 'branding',
-      type: 'branding',
+      name: 'heading-title',
+      type: 'heading-title',
     }),
     defineArrayMember({
-      name: 'case-study-list',
-      type: 'case-study-list',
+      name: 'branding',
+      type: 'branding',
     }),
     defineArrayMember({
       name: 'journey-carousel',
       type: 'journey-carousel',
     }),
     defineArrayMember({
+      name: 'case-study-list',
+      type: 'case-study-list',
+    }),
+    defineArrayMember({
       name: 'testimonial-list',
       type: 'testimonial-list',
+    }),
+    defineArrayMember({
+      name: 'team',
+      type: 'team',
     }),
     defineArrayMember({
       name: 'companies',
@@ -42,6 +50,19 @@ export default defineField({
       name: 'video',
       type: 'video',
     }),
+    defineArrayMember({
+      name: 'contact-form',
+      type: 'reference',
+      to: {type: 'contact-form'},
+    }),
+    defineArrayMember({
+      name: 'contact-us-cta',
+      type: 'contact-us-cta',
+    }),
+    defineArrayMember({
+      name: 'image-with-list',
+      type: 'image-with-list',
+    }),
   ],
   options: {
     layout: 'list',
@@ -52,6 +73,16 @@ export default defineField({
           name: 'landing',
           title: 'Landing Page',
           of: ['branding', 'case-study-list', 'testimonial-list', 'journey-carousel'],
+        },
+        {
+          name: 'promotte',
+          title: 'Promote',
+          of: ['contact-us-cta'],
+        },
+        {
+          name: 'misc',
+          title: 'Miscellaneous',
+          of: ['heading-title', 'contact-form', 'image-with-list', 'simple-text', 'video'],
         },
       ],
       views: [

@@ -4,7 +4,6 @@ import {
   VscCodeOss,
   VscMultipleWindows,
   VscServerProcess,
-  VscTerminalUbuntu,
   VscTools,
 } from 'react-icons/vsc'
 import {group, singleton} from './utils/utils'
@@ -22,11 +21,10 @@ const structure: StructureResolver = (S) =>
       S.divider(),
       group(S, 'Web Pages', [
         S.documentTypeListItem('page').title('Pages').icon(VscMultipleWindows),
-        singleton(S, 'aboutUsPage', 'About Us').icon(VscServerProcess),
         singleton(S, 'blogPage', 'Blog').icon(VscServerProcess),
-        singleton(S, 'caseStudyPage', 'CaseStudy').icon(VscServerProcess),
+        singleton(S, 'caseStudyPage', 'Case Study').icon(VscServerProcess),
         singleton(S, 'careersPage', 'Career').icon(VscServerProcess),
-        singleton(S, 'contactUsPage', 'Contact Us').icon(VscServerProcess),
+        singleton(S, 'servicesPage', 'Our Services').icon(VscServerProcess),
         singleton(S, 'testimonialPage', 'Testimonial').icon(VscServerProcess),
       ]).icon(VscCodeOss),
       S.divider(),

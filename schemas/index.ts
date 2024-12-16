@@ -7,11 +7,9 @@ import blogPage from './singletons/blog'
 import career from './documents/career'
 import careersPage from './singletons/career'
 import companies from './modules/companies'
-import aboutUs from './singletons/about-us'
 import testimonial from './singletons/testimonial'
 import multiPartImage from './documents/multiPartImage'
 import caseStudy from './singletons/case-study'
-import contactUs from './singletons/contact-us'
 import seo from './objects/seo'
 import globalSeo from './documents/globalSeo'
 import footer from './singletons/footer'
@@ -25,6 +23,12 @@ import gallery from './modules/gallery'
 import textWithLogo from './modules/text-with-logo'
 import simpleText from './modules/simple-text'
 import video from './modules/video'
+import contactForm from './modules/contact-form'
+import headingTitle from './modules/heading-title'
+import contactUsCta from './modules/contact-us-cta'
+import team from './modules/team'
+import imageWithList from './modules/image-with-list'
+import services from './singletons/services'
 
 export const schemaTypes = [
   // document
@@ -33,16 +37,14 @@ export const schemaTypes = [
   teamMember,
   blog,
   career,
-  aboutUs,
   testimonial,
   companies,
   blogPage,
   caseStudy,
   careersPage,
-  contactUs,
   globalSeo,
   footer,
-  page,
+  page,services,
 
   // array
   blockContent,
@@ -60,6 +62,11 @@ export const schemaTypes = [
   textWithLogo,
   simpleText,
   video,
+  contactForm,
+  headingTitle,
+  contactUsCta,
+  team,
+  imageWithList,
 
   // modules
   modules,

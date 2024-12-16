@@ -41,12 +41,11 @@ export default defineConfig({
         'caseStudy',
         'testimonialCard',
         'globalSeo',
-        'aboutUsPage',
         'testimonialPage',
         'blogPage',
         'caseStudyPage',
         'careersPage',
-        'contactUsPage',
+        'servicesPage',
       ],
     }),
     internationalizedArray({

@@ -2,8 +2,8 @@ import {defineField, defineType} from 'sanity'
 import {VscInspect} from 'react-icons/vsc'
 
 export default defineType({
-  name: 'case-study-list',
-  title: 'Case Study list',
+  name: 'heading-title',
+  title: 'Heading title',
   icon: VscInspect,
   type: 'object',
   fields: [
@@ -11,7 +11,6 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
@@ -20,25 +19,16 @@ export default defineType({
       rows: 4,
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: 'listTitle',
-      title: 'List Title',
-      type: 'string',
-    }),
-    defineField({
-      name: 'caseStudies',
-      title: 'Case Studies',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'caseStudy'}}],
-    }),
   ],
   preview: {
     select: {
       title: 'title',
     },
-    prepare: ({title}) => ({
-      title: title || 'Case Study List',
-      subtitle: 'Case Study List',
-    }),
+    prepare: ({title}) => {
+      return {
+        title,
+        subtitle: 'Heading title',
+      }
+    },
   },
 })
