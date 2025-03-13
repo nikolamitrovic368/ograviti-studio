@@ -4,7 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {presentationTool} from 'sanity/presentation'
 import {schemaTypes} from './schemas'
 import structure from './structure'
-import {BASE_URL} from './env'
+import {BASE_URL, dataset, projectId} from './env'
 import {
   DeleteTranslationAction,
   documentInternationalization,
@@ -14,10 +14,8 @@ import {internationalizedArray} from 'sanity-plugin-internationalized-array'
 export default defineConfig({
   name: 'default',
   title: 'ograviti',
-
-  projectId: 'i8alq04o',
-  dataset: 'staging',
-
+  projectId,
+  dataset,
   plugins: [
     structureTool({structure}),
     visionTool(),
@@ -25,7 +23,7 @@ export default defineConfig({
       title: 'Editor',
       previewUrl: {
         draftMode: {
-          enable: `${BASE_URL}/api/draft`,
+          enable: `${BASE_URL}/api/draft-mode/enable`,
         },
       },
     }),
