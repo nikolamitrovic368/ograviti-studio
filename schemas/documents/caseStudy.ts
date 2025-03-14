@@ -59,6 +59,12 @@ export default defineType({
       type: 'modules',
     }),
     defineField({
+      name: 'relatedCaseStudies',
+      title: 'Related Case Studies',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'caseStudy'}}],
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
