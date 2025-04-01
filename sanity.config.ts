@@ -22,8 +22,9 @@ export default defineConfig({
     presentationTool({
       title: 'Editor',
       previewUrl: {
-        draftMode: {
-          enable: `${BASE_URL}/api/draft-mode/enable`,
+        origin: BASE_URL,
+        previewMode: {
+          enable: '/api/draft-mode/enable',
         },
       },
     }),
